@@ -1,0 +1,414 @@
+{
+	"info": {
+		"_postman_id": "22d422b4-4a51-4a76-930b-7954309c176c",
+		"name": "Suzuki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23360694"
+	},
+	"item": [
+		{
+			"name": "list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "list",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ca-mHL7Y/yVphqlx942nYARevI4s7U\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 15:15:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"successfully listed!\",\n    \"list\": [\n        {\n            \"_id\": \"67a380584b53f21f118c70cb\",\n            \"user\": \"Harry Potter\",\n            \"interest\": [\n                \"Comics\",\n                \"Sports\",\n                \"Book reading\"\n            ],\n            \"age\": 25,\n            \"mobile\": 4234243224,\n            \"email\": \"harry@potter.com\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "by id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67a380584b53f21f118c70cb"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-qQ/moKbKopHFZla2nGzMXzE8qYQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 15:15:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User deleted successfully\",\n    \"user\": {\n        \"_id\": \"67a380584b53f21f118c70cb\",\n        \"user\": \"Harry Potter\",\n        \"interest\": [\n            \"Comics\",\n            \"Sports\",\n            \"Book reading\"\n        ],\n        \"age\": 25,\n        \"mobile\": 4234243224,\n        \"email\": \"harry@potter.com\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \"user\": \"Harry Potter\",\r\n            \"interest\": [\r\n                \"Comics\",\r\n                \"Sports\",\r\n                \"Book reading\"\r\n            ],\r\n            \"age\": 25,\r\n            \"mobile\": 4234243224,\r\n            \"email\": \"harry@potter.com\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67a189af1d872a76ae154f26"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update by id",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"user\": \"Harry Potter\",\r\n            \"interest\": [\r\n                \"Comics\",\r\n                \"Sports\",\r\n                \"Book reading\"\r\n            ],\r\n            \"age\": 25,\r\n            \"mobile\": 4234243224,\r\n            \"email\": \"harry@potter.com\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67a380584b53f21f118c70cb"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "144"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"90-L//689iOCgfZayjOvS2Z3f9LFvc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 15:15:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    },\n    \"message\": \"Successfully updated the data!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"Harry\", // string\r\n    \"interest\": [\"Comics\", \"Sports\"], // array of string\r\n    \"age\": 22, // integer\r\n    \"mobile\": 4234243224, // long\r\n    \"email\" : \"harry@potter.com\" // email\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"Harry\", // string\r\n    \"interest\": [\"Comics\", \"Sports\"], // array of string\r\n    \"age\": 22, // integer\r\n    \"mobile\": 4234243224, // long\r\n    \"email\" : \"harry@potter.com\" // email\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-sDJI96Ahw74FkOk44JD0ztpJUJA\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 05 Feb 2025 15:14:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"insertedId\": \"67a380584b53f21f118c70cb\"\n    },\n    \"message\": \"Successfully registered!\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
