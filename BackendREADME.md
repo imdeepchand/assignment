@@ -1,7 +1,5 @@
 # Node.js App with MongoDB
 
-This is a simple Node.js application that connects to a MongoDB database using Mongoose. The app can run locally or be containerized using Docker and Docker Compose.
-
 ## Table of Contents
 
 - [Features](#features)
