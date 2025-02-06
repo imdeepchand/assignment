@@ -31,8 +31,8 @@ This is a simple Node.js application that connects to a MongoDB database using M
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/yourusername/your-repo.git
-   cd your-repo
+   git clone https://github.com/imdeepchand/assignment.git
+   cd assignment
 
 Install Dependencies
 
